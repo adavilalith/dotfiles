@@ -145,4 +145,4 @@ fastfetch() {
         command fastfetch "$@"
     fi
 }
-fastfetch
+alias ff="fastfetch"
