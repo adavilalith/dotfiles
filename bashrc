@@ -127,3 +127,22 @@ alias ll='ls -lha --color=auto'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias update='sudo apt update && sudo apt upgrade -y'
+
+
+# Fastfetch Meme Logic
+fastfetch() {
+    # Path to your assets
+    local LOGO_DIR="$HOME/dotfiles/assets/logos"
+
+    # 1 in 5 chance (adjust 5 to change rarity)
+    if [ $(( RANDOM % 5 )) -eq 0 ]; then
+        # Pick a random file from your logo directory
+        # This works for .png, .jpg, or .txt ASCII files
+        local MEME=$(ls "$LOGO_DIR" | shuf -n 1)
+        command fastfetch --logo "$LOGO_DIR/$MEME" "$@"
+    else
+        # Run standard fastfetch with your default config
+        command fastfetch "$@"
+    fi
+}
+fastfetch
