@@ -127,6 +127,7 @@ alias ll='ls -lha --color=auto'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias update='sudo apt update && sudo apt upgrade -y'
+alias c="clear"
 
 
 # Fastfetch Meme Logic
