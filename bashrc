@@ -147,3 +147,10 @@ fastfetch() {
     fi
 }
 alias ff="fastfetch"
+
+#needed so that uv converts all .env to uv_env_files
+export UV_ENV_FILE=".env"
+
+#setting vim as editor for commit messages
+export GIT_EDITOR=vim
+
